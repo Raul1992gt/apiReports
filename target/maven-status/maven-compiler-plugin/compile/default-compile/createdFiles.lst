@@ -1,10 +1,11 @@
-com\apirest\model\DetalleReporte$EstadoDetalle.class
 com\apirest\model\Usuario.class
-com\apirest\mapper\IMapper.class
-com\apirest\service\UsuarioService.class
 com\apirest\model\DetalleReporte.class
-com\apirest\controller\ApiController.class
 com\apirest\model\Reporte.class
 com\apirest\app\AppApplication.class
 com\apirest\repository\UsuarioRepository.class
+com\apirest\model\DetalleReporte$EstadoDetalle.class
+com\apirest\utils\UsuariosJasperReportGenerator.class
+com\apirest\mapper\IMapper.class
+com\apirest\service\UsuarioService.class
+com\apirest\controller\ApiController.class
 com\apirest\controller\UsuarioController.class

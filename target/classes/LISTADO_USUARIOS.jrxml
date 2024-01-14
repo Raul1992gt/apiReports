@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="LISTADO_USUARIOS" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8adea26d-ca0f-4da1-88f5-17f4ae736fb2">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="LISTADO_USUARIOS" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<field name="id_usuario" class="java.lang.Long"/>
+	<field name="nombre" class="java.lang.String"/>
+	<field name="correo" class="java.lang.String"/>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="555" height="41" forecolor="#FFFFFF" backcolor="#1D11F5" uuid="686ddf69-8057-45ca-b0a8-4526ba85c1c1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Listado de Usuarios]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="59" width="59" height="20" backcolor="#BFB8B8" uuid="eb8ff5b6-d3e0-4908-8eb1-87ebe7a41c53"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[id_usuario]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="59" y="59" width="241" height="20" backcolor="#BFB8B8" uuid="755cf5a1-8f6f-4ae7-a908-55e025dc92ae"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="300" y="59" width="255" height="20" backcolor="#BFB8B8" uuid="d2d5711c-404e-4d99-8ae4-1c6b74b23c02"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[correo]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="555" height="21" backcolor="#B1DEBE" uuid="0494806c-64e9-4600-be74-26e697555b27"/>
+			</frame>
+			<textField>
+				<reportElement x="0" y="0" width="59" height="21" uuid="2b912e15-3c3e-48a4-acae-8d2a7dbb3ed0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{id_usuario}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="59" y="0" width="241" height="21" uuid="ce5dfa89-13ed-4412-891c-e08bafab34be"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="0" width="255" height="21" uuid="e4449d93-c375-45a2-9da1-14faa855486f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{correo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

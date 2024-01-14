@@ -2,10 +2,13 @@ package com.apirest.service;
 
 import com.apirest.model.Usuario;
 import com.apirest.repository.UsuarioRepository;
+import com.apirest.utils.UsuariosJasperReportGenerator;
+import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class UsuarioService {
@@ -13,6 +16,8 @@ public class UsuarioService {
     @Autowired
     private final UsuarioRepository usuarioRepository;
 
+    @Autowired
+    private UsuariosJasperReportGenerator usuariosJasperReportGenerator;
 
     @Autowired
     public UsuarioService(UsuarioRepository usuarioRepository) {
@@ -38,4 +43,13 @@ public class UsuarioService {
     public List<Usuario> getAll() {
         return usuarioRepository.findAll();
     }
+
+    public byte[] exportarPdf(JRBeanCollectionDataSource dataSource) throws Exception {
+        return usuariosJasperReportGenerator.exportToPdf(dataSource);
+    }
+
+    public byte[] exportarXls() throws Exception {
+        return usuariosJasperReportGenerator.exportToXls(usuarioRepository.findAll());
+    }
+
 }
